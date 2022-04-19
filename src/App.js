@@ -1,42 +1,32 @@
-import "./App.css";
-import logo from "./logo.png";
-
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Nav from './components/nav';
+import { useData } from "./context/fetchdata";
+import {Cart,Wishlist,Home,Login,Signup,Offer,Productpg,User} from "./pages/import";
+import {Men,Women,Productlist} from "./product-listing/product-listing-import";
 function App() {
+  const {state,dispatch}=useData()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
-    </div>
+    <Router>
+      <Nav/>
+      <Switch>
+        <Route path="/" exact><Home/></Route>
+        <Route path="/login" ><Login/></Route>
+        <Route path="/signup" ><Signup/></Route>
+        <Route path="/cart" ><Cart/></Route>
+        <Route path="/wishlist" ><Wishlist/></Route>
+        <Route path="/men" ><Men/></Route>
+        <Route path="/women" ><Women/></Route>
+        <Route path="/offer" ><Offer/></Route>
+        <Route path="/Product/:id" ><Productpg/></Route>
+        <Route path="/user" ><User/></Route>
+        {/* <Route path="/Productlist/:name" ><Productlist/></Route> */}
+      </Switch>
+    </Router>
   );
 }
 

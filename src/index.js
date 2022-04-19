@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
+import Data from "./context/fetchdata";
 import { makeServer } from "./server";
-
+import "./index.css"
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Data>
+      <App />
+    </Data>
   </React.StrictMode>,
   document.getElementById("root")
 );
