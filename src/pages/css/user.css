@@ -1,0 +1,20 @@
+.user-box{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--litegray-bg);
+    margin-top: 2rem;
+    border-radius: .5rem;
+}
+.user-head{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.user-item{
+    font-size: 1.2rem;
+}
+.user-name,.user-password{
+    font-weight: bold;
+}
