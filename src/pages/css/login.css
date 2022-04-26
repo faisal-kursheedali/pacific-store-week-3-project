@@ -1,0 +1,36 @@
+.login-container{
+    width: 50%;
+    margin: auto;
+    background-color: var(--litegray-bg);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    
+    text-align: center;
+}
+.login-head{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.login-input{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.login-item{
+    margin-top: .5rem;
+    font-weight: bold;
+}
+.login-label{
+    font-size: 1.2rem;
+    
+}
+.login-btn{
+    display: flex;
+    justify-content: center;
+}
+.login-alert{
+    margin: auto;
+    margin-top: 2rem;
+}
