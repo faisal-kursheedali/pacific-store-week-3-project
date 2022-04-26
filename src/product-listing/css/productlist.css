@@ -1,0 +1,72 @@
+.productlist-container{
+    display: flex;
+    height: 100vh;
+}
+.productlist-filterbox{
+    position: relative;
+    width: 20%;
+    padding: 1rem;
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    background-color: var(--dark-bg);
+    color: var(--white-txt);
+    position: sticky;
+    top: 0;
+   
+}
+.product-listing-space{
+    width: 80%;
+}
+.card-normal-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.ecom-card-normal{
+    display: inline;
+    max-width: 200px;
+    border: 1px solid black;
+}
+.card-floating-icn-cart,.card-floating-icn-heart{
+    position: absolute;
+    font-size: 1.5rem;
+    right: .5rem;
+    border-radius: .5rem;
+    background-color: var(--dark-bg);
+    padding: .5rem;
+    color: white;
+    cursor: pointer;
+}
+.card-floating-icn-cart{
+    top: 1rem;
+}
+.card-floating-icn-heart{
+    top: 3rem;
+}
+.icn-heart-clicked{
+    color: red;
+}
+.icn-cart-clicked{
+    color: aqua;
+}
+@media (max-width:750px) {
+    .productlist-container{
+       flex-direction: column;
+       height: 100%;
+    }
+    .productlist-filterbox{
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    .product-listing-space{
+        width: 100%;
+    }
+    .card-normal-container{
+        justify-content: space-evenly;
+    }
+}
