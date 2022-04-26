@@ -1,0 +1,41 @@
+.filter{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* z-index: 6; */
+}
+.filter-head{
+    font-weight: bolder;
+}
+.filter-box{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.filter-item{
+    margin-left: .5rem;
+    padding-right: .5rem;
+    height: 100%;
+    line-height:1.3;
+}
+.filter-item-head{
+    font-weight: bold;
+}
+.clear-filter-btn{
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right:1rem;
+    cursor: pointer;
+}
+@media (min-width:750px){
+    .filter-box{
+        flex-direction: column;
+    }
+    .filter-item{
+        padding-top: 1rem;
+    }
+    
+}
