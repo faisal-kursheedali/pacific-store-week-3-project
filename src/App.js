@@ -5,11 +5,11 @@ import {
   Route
 } from "react-router-dom";
 import Nav from './components/nav';
-import { useData } from "./context/fetchdata";
+// import { useData } from "./context/fetchdata";
 import {Cart,Wishlist,Home,Login,Signup,Offer,Productpg,User} from "./pages/import";
-import {Men,Women,Productlist} from "./product-listing/product-listing-import";
+import {Men,Women} from "./product-listing/product-listing-import";
 function App() {
-  const {state,dispatch}=useData()
+  // const {state,dispatch}=useData()
   return (
     <Router>
       <Nav/>

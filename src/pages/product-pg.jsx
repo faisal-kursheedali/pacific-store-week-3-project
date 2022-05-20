@@ -25,7 +25,7 @@ const Productpg = () => {
                                 <img src={i.imge2} alt="" className="prod-side-img" onClick={() => setimg(i.image2)} />
                             </div>
                             <div className="prod-main-img-container">
-                                <img src={img} alt className="prod-main-img" />
+                                <img src={img} alt="" className="prod-main-img" />
                             </div>
                         </div>
                         {i.cart?<button className="btn prod-btn btn-sec" onClick={() => dispatch({ type: "remove-from-cart", payload: i })}><BsFillCartDashFill className='prod-btn-icn' 
@@ -61,7 +61,7 @@ const Productpg = () => {
                         <div className="prod-detail-container">
                             <div className="prod-detai-head p1">Peoduct detail</div>
                             <p className="prod-detail-txt">{i.productDetail}</p>
-                            <a href="#" className="prod-detail-link link-fancy">More information</a>
+                            <a href="./" className="prod-detail-link link-fancy">More information</a>
                         </div>
                         <div className="prod-sold-by-container">
                             <div className="p1">Sold by</div>

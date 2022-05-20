@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useData } from '../context/fetchdata'
 import "./css/filter.css"
 import {FcClearFilters} from "react-icons/fc"

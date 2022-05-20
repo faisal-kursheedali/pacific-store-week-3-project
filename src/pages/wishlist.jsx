@@ -1,6 +1,6 @@
 import React from 'react'
 import { useData } from '../context/fetchdata'
-import { AiFillStar, AiOutlineHeart, AiFillHeart } from "react-icons/ai"
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai"
 import { BsFillCartPlusFill, BsFillCartDashFill } from "react-icons/bs"
 import './css/wishlist.css'
 const Wishlist = () => {

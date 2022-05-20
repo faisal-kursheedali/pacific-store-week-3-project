@@ -6,9 +6,8 @@ import "./css/cart.css"
 const Cart = () => {
   const {state,dispatch}=useData();
   const cart=state.cart;
-  console.log(cart);
   let price=0;
-  {cart.forEach(i => {
+  {cart.forEach((i)=> {
     price= price +i.price;
     
   })}

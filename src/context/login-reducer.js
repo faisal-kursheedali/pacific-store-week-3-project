@@ -6,5 +6,8 @@ export default function Login(info,action){
         case("logout"):{
             return({...info,login:!info.login,user:"",password:""})
         }
+        default:{
+            
+        }
     }
 }

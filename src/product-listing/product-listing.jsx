@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import "./css/productlist.css"
 import {AiFillStar,AiOutlineHeart,AiFillHeart} from "react-icons/ai"
 import {BsFillCartPlusFill,BsFillCartDashFill} from "react-icons/bs"
@@ -22,7 +22,7 @@ const {info:{login}}=useData()
                   return (
                     
                     <div className="card-normal ecom-card-normal" key={i.id}>
-                      <img src={i.image} alt="image" className="card-normal-img" />
+                      <img src={i.image} alt="" className="card-normal-img" />
                       <div className="card-normal-info">
                         <div className="card-head">{i.name}</div>
                         <div className="card-sub">{i.desc}</div>
@@ -54,7 +54,7 @@ const {info:{login}}=useData()
                 } else {
                   return(<div className="card-normal ecom-card-normal card-disable" key={i.id}>
                     <div className="card-disable-txt">Sold Out</div>
-                    <img src={i.image} alt="image" className="card-normal-img" />
+                    <img src={i.image} alt="" className="card-normal-img" />
                       <div className="card-normal-info">
                         <div className="card-head">{i.name}</div>
                         <div className="card-sub">{i.desc}</div>

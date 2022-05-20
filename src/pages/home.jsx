@@ -1,6 +1,6 @@
 import React from 'react';
 import{Link} from "react-router-dom";
-import {Men,Women} from "../product-listing/product-listing-import";
+// import {Men,Women} from "../product-listing/product-listing-import";
 import "./css/home.css"
 
 
