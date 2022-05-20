@@ -7,10 +7,10 @@ const Cart = () => {
   const {state,dispatch}=useData();
   const cart=state.cart;
   let price=0;
-  {cart.forEach((i)=> {
+  cart.forEach((i)=> {
     price= price +i.price;
     
-  })}
+  })
   return (
     <div className="cart-container">
       <div className="cart-sub-space">
