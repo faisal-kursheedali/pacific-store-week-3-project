@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./css/product.css"
 import { AiOutlineShop, AiFillStar } from "react-icons/ai"
 import { MdVerified } from "react-icons/md"
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
+import { useLocation } from "react-router-dom";
 import {BsFillCartPlusFill,BsFillCartDashFill} from "react-icons/bs"
 import { useData } from '../context/fetchdata'
 const Productpg = () => {

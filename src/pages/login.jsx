@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import "./css/login.css"
 import{CgDanger} from "react-icons/cg"
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useData } from "../context/fetchdata"
 import User from './user'
+import { useAuth } from '../context/auth-context'
 const Login = () => {
+  const {setUserLogin}=useAuth();
   const { info: { login }, loginHandler } = useData()
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
-  console.log(login);
+  const location = useLocation();
+  const navigate = useNavigate();
+  // console.log(location.state.from.pathname);
+
+  // console.log(location.state.from.pathname);
   return (
     !login ? (
       <>
@@ -30,8 +36,10 @@ const Login = () => {
           </div>
           <div className="login-btn">
             {user&&password!=="" ? (<button className="btn" onClick={() => {
-              loginHandler({ type: "login", payload: { user, password } })
-            }}><Link to="/" className='link-nostyle'>Log-in</Link></button>) : (<button className="btn btn-sec">Log-in</button>)}
+              loginHandler({ type: "login", payload: { user, password } });
+              setUserLogin(userLogin=>userLogin=true);
+              location.state===null ?navigate("/")  :navigate(`${location.state.from.pathname}`) 
+            }}>Login</button>) : (<button className="btn btn-sec">Log-in</button>)}
 
           </div>
           <div className="login-sm-txt txt-center">
